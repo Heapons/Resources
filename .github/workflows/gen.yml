@@ -2,34 +2,32 @@ name: Generate Resource Packs
 on:
   push:
     branches:
-      - main
+    - main
 jobs:
-  check-bats-version:
+  build:
     runs-on: ubuntu-latest
     steps:
+      - name: Check Changes
+        id: version
+        uses: Soumeh/Auto-Versioning@main
       - name: Checkout Repo
         uses: actions/checkout@v2
-      - name: Build Vanilla
+      - name: Build Vanilla Pack
         uses: Sorrowfall/Resource-Packager@main
         with:
-          parts:
-            shared/
-            vanilla/
-          name: Pack-Vanilla
-      - name: Publish
-        uses: EndBug/add-and-commit@v7
+          filename: vanilla
+          items: |
+            shared
+            vanilla
+          gen-sha1: true
+      - name: Create Release
+        uses: meeDamian/github-release@2.0
         with:
-          author_name: Builder[bot]
-          author_email: mail@unmail.com
-          branch: 'build'
-          branch_mode: create
-          message: 'Build pack(s)'
-      #- name: Create Release
-      #  uses: meeDamian/github-release@2.0
-      #  with:
-      #    token: ${{ secrets.GITHUB_TOKEN }}
-      #    name: ${{ github.event.head_commit.message }}
-      #    tag: test
-      #    gzip: false
-      #    files: >
-      #      build/Pack-Vanilla.zip
+          token: ${{ secrets.GITHUB_TOKEN }}
+          name: ${{ github.event.head_commit.message }}
+          tag: v${{ steps.version.outputs.tag }}
+          body: "${{ steps.version.outputs.changelog }}"
+          gzip: false
+          files: >
+            build/vanilla.zip
+            build/vanilla.sha1
