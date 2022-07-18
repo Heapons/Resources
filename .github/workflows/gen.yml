@@ -17,8 +17,9 @@ jobs:
         with:
           name: vanilla
           parts:
-            shared
-            vanilla
+            shared/
+            dev/
+            vanilla/
       - name: Create Release
         uses: meeDamian/github-release@2.0
         with:
