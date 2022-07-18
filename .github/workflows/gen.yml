@@ -12,7 +12,7 @@ jobs:
       - name: Build Vanilla
         uses: Sorrowfall/Resource-Packager@main
         with:
-          items:
+          parts:
             shared/
             vanilla/
           name: Pack-Vanilla
