@@ -15,11 +15,10 @@ jobs:
       - name: Build Vanilla Pack
         uses: Sorrowfall/Resource-Packager@main
         with:
-          filename: vanilla
-          items: |
+          name: vanilla
+          parts:
             shared
             vanilla
-          gen-sha1: true
       - name: Create Release
         uses: meeDamian/github-release@2.0
         with:
