@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "block/acacia_slab"
+    },
+    "type=double,waterlogged=false": {
+      "model": "placeholder/planks"
+    },
+    "type=double,waterlogged=true": {
+      "model": "placeholder/planks"
+    },
+    "type=top": {
+      "model": "block/acacia_slab_top"
+    }
+  }
+}

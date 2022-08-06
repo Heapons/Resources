@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "block/purpur_slab"
+    },
+    "type=double,waterlogged=false": {
+      "model": "placeholder/polished_cut"
+    },
+    "type=double,waterlogged=true": {
+      "model": "placeholder/polished_cut"
+    },
+    "type=top": {
+      "model": "block/purpur_slab_top"
+    }
+  }
+}

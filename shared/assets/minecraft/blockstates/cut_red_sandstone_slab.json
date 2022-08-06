@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "block/cut_red_sandstone_slab"
+    },
+    "type=double,waterlogged=false": {
+      "model": "placeholder/cut"
+    },
+    "type=double,waterlogged=true": {
+      "model": "placeholder/cut"
+    },
+    "type=top": {
+      "model": "block/cut_red_sandstone_slab_top"
+    }
+  }
+}

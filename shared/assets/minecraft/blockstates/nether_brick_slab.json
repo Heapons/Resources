@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "block/nether_brick_slab"
+    },
+    "type=double,waterlogged=false": {
+      "model": "placeholder/bricks"
+    },
+    "type=double,waterlogged=true": {
+      "model": "placeholder/bricks"
+    },
+    "type=top": {
+      "model": "block/nether_brick_slab_top"
+    }
+  }
+}

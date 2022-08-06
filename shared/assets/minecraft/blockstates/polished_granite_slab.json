@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "block/polished_granite_slab"
+    },
+    "type=double,waterlogged=false": {
+      "model": "placeholder/double_slab"
+    },
+    "type=double,waterlogged=true": {
+      "model": "placeholder/double_slab"
+    },
+    "type=top": {
+      "model": "block/polished_granite_slab_top"
+    }
+  }
+}

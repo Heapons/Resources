@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "block/quartz_slab"
+    },
+    "type=double,waterlogged=false": {
+      "model": "placeholder"
+    },
+    "type=double,waterlogged=true": {
+      "model": "placeholder"
+    },
+    "type=top": {
+      "model": "block/quartz_slab_top"
+    }
+  }
+}

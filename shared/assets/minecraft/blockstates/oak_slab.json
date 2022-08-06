@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "block/oak_slab"
+    },
+    "type=double,waterlogged=false": {
+      "model": "placeholder/planks"
+    },
+    "type=double,waterlogged=true": {
+      "model": "placeholder/planks"
+    },
+    "type=top": {
+      "model": "block/oak_slab_top"
+    }
+  }
+}
